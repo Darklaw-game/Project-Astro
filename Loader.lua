@@ -30,7 +30,7 @@ LoaderTab:AddDropdown({
 	Default = "Universal",
 	Options = {"Universal", "Slap Battles"},
 	Callback = function(Universal)
-		print("comming soon")
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darklaw-game/Project-Astro/refs/heads/main/Games/Universal.lua",true))()
     callback = function(Slap Battles)
         print("comming soon")
 	end    
