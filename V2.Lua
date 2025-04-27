@@ -35,6 +35,3 @@ local Window = Rayfield:CreateWindow({
 
  local InfoTab = Window:CreateTab("Info", "rewind")
  local Section = InfoTab:CreateSection("Info!")
- local Label = InfoTab:CreateLabel("Check Slap [ "..game.Players.LocalPlayer.leaderstats.Slaps.Value.." ]"), 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
- local Label = InfoTab:CreateLabel("You're Using Glove [ "..game.Players.LocalPlayer.leaderstats.Glove.Value.." ]"), 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
- local Label = InfoTab:CreateLabel("Plate Time [ "..game.Players.LocalPlayer.PlayerGui.PlateIndicator.TextLabel.Text.." ]"), 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
