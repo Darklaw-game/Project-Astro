@@ -4,7 +4,7 @@ local Window = Rayfield:CreateWindow({
     Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
     LoadingTitle = "Welcome!",
     LoadingSubtitle = "Developed By Corrupt_Echo",
-    Theme = "Amethyst", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+    Theme = "Ocean", -- Check https://docs.sirius.menu/rayfield/configuration/themes
  
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -34,7 +34,24 @@ local Window = Rayfield:CreateWindow({
  })
 
  local InfoTab = Window:CreateTab("Info", "rewind")
- local Section = InfoTab:CreateSection("Info!")
- local Label = InfoTab:CreateLabel("Check Slap [ "..game.Players.LocalPlayer.leaderstats.Slaps.Value.." ]"), 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
- local Label = InfoTab:CreateLabel("You're Using Glove [ "..game.Players.LocalPlayer.leaderstats.Glove.Value.." ]"), 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
- local Label = InfoTab:CreateLabel("Plate Time [ "..game.Players.LocalPlayer.PlayerGui.PlateIndicator.TextLabel.Text.." ]"), 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+ local Label = InfoTab:CreateLabel("Welcome! made by corrupt_Echo whatever"), 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+
+local AntiTab = Window:CreateTab("Anti", "rewind")
+local Button = AntiTab:CreateButton({
+    Name = "Anti Mod | Admin",
+    Callback = function()
+        _G.AntiMods = Value
+while _G.AntiMods do
+for i,v in pairs(game.Players:GetChildren()) do
+        if v:GetRankInGroup(9950771) >= 2 then
+         _G.AntiKick = false
+     game.Players.LocalPlayer:Kick("High Rank Player Detected.".." [ "..v.Name.." ]")
+   break
+     end
+end
+task.wait()
+end
+	end  
+    -- The function that takes place when the button is pressed
+    end,
+ })
